@@ -18,7 +18,7 @@ func main(){
 
 	colorReset := "\033[0m"
 	colorRed := "\033[31m"
-    colorGreen := "\033[32m"
+        colorGreen := "\033[32m"
 
 
 	sc := bufio.NewScanner(os.Stdin)
@@ -43,7 +43,7 @@ func main(){
 	   			}
 	   			sb := string(body)
 	   			check_result := strings.Contains(sb , "729")
-          check_result2 := strings.Contains(sb, "{{27*27}}")
+                                check_result2 := strings.Contains(sb, "{{27*27}}")
 	   			// fmt.Println(check_result)
 	   			if check_result != false || check_result2 != false {
 	   				fmt.Println(string(colorRed),"possivel SSTI encontrado:", domain,string(colorReset))
